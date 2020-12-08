@@ -68,3 +68,22 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+```
+cd terraform
+terraform init
+terraform workspace new dev|prod
+terraform workspace list
+terraform workspace select dev
+terraform plan
+terraform apply
+
+cd ..
+yarn
+yarn build
+aws s3 sync build/ s3://[bucket_name] --exclude '*.DS_Store' --acl public-read
+```
+
+
